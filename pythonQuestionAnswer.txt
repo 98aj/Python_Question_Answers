@@ -1,0 +1,96 @@
+1. Explain the key features of Python that make it a popular choice for programming?
+=> Python is one of the most popular programming language due to its following features
+    1. Simple and readable syntax
+    2. Dynamically typed language so need to declare data type of variable.
+    3. Large number of library build for various tasks.
+    4. Large community support.
+    5. Open source and free to use.
+    6. Supports object oriented programming.
+
+2. Describe the role of predefined keywords in Python and provide examples of how they are used in a  program?
+=> Predefined keywords in Python are reserved words that have special meaning. They are used to define the syntax and structure of Python programs and cannot be used as variable names.
+
+    # example
+
+    def func1(*args): # def is user for function defination
+        n=[]
+        for i in args: # for is used for loop the iterables
+                if type(i) == list:    # if is used for checking conditions in program
+                        n.append(i)
+        return n # return is used to return a value from function
+
+    a = func1(1,2,[1,2], 3)
+    print(a) # print is used for displaying message or print message on screen or terminal
+
+3. Compare and contrast mutable and immutable objects in Python with examples?
+=> Mutable object:
+    1. Mutable object are object that can be changed after its creation
+    2. list, dict are examples of mutable object
+    3. example
+        myList = [1.2,3,5,"Abhi", (3+6j), [1,2.3]]
+        myList.append('5')
+        print(myList) # [1.2,3,5,"Abhi", (3+6j), [1,2.3], 5]
+    
+   Inmutable object:
+    1. Inmutable object are object that can not be changed after its creation
+    2. Tupel, str are example of Inmutable object
+    3. When we try to change this object Python give error as they acts constant
+
+4. Discuss the different types of operators in Python and provide examples of how they are used?
+=> following are types of operators in Python
+    1. Arithmetic operators
+        e.g: a + b, a - b, a * b, a / b
+    2. Comparison operators
+        e.g: a == b, a < b, a > b
+    3. Assignment operators
+        e.g: a = b, a += b, a -= b
+    4. Logical operators
+        e.g: a == b and c != d
+    5. Membership operators
+        e.g: a in 'Abhi' # return True
+    6. Identity operators
+        e.g: a is b, a is not b
+        
+5. Explain the concept of type casting in Python with examples?
+=> Type casting means converting a value from one data type to other
+    e.g:  a = '10'
+          b = int(a) # It convert data type of a (str) string to (int) integer
+
+6. How do conditional statements work in Python? Illustrate with examples
+=> Conditional statements are used to make decisions in Python programs based on certain conditions.
+    e.g: userInput=input("Enter a number: ")
+
+        if userInput.isdigit():
+            num=int(userInput)
+            print("You have enter a valid number")
+        else:
+            print("Please enter a valid number")    
+        # In this example if user enter a valid input we will execute code block of if other wise we will execute else code block
+
+7. Describe the different types of loops in Python and their use cases with examples?
+=> Loops are used to iterate over an object to perform a same action on each element of iterables of run a block of code until exit with condition
+    1. For loop: It is user to iterate over a sequence like list, tupel, string
+        e.g. myData = [(1,2), (3, 4)]
+
+             for x, y in myData:
+               print(f"x: {x}, y: {y}") # this will print value of x and y in until all element of myData is iterated
+               x: 1, y: 2
+               x: 3, y: 4
+
+    2. While loop: This loop run until the condition is true and once condition in false it exit the loop
+        e.g. maxStar=5
+             row=1
+             
+             while row <= maxStar:
+                col=1
+                while col <= row:
+                    print('*', end='')
+                    col += 1
+                print()
+                row += 1
+            # this will print the star pattern and run until row value is less than equal to 5
+            *
+            **
+            ***
+            ****
+            *****
